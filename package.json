@@ -12,6 +12,9 @@
     "@react-email/components": "^0.0.27",
     "ai": "^3.0.13",
     "bcryptjs": "^2.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.464.0",
     "mongoose": "^8.8.0",
     "next": "15.0.2",
     "next-auth": "^4.24.10",
@@ -20,6 +23,8 @@
     "react-dom": "^18.3.1",
     "react-email": "^3.0.2",
     "resend": "^4.0.1-alpha.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
   },
   "devDependencies": {
