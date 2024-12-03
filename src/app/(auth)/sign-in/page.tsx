@@ -65,7 +65,7 @@ export default function SignInForm() {
                     <h1 className="text-2xl font-bold tracking-tight lg:text-5xl mb-6">
                         Welcome Back to Honest Opinions
                     </h1>
-                    <p className="mb-4">Sign in to continue your secret conversations</p>
+                    <p className="mb-4">Log in to access your private conversations.</p>
                 </div>
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
