@@ -103,7 +103,7 @@ export default function SignUpForm() {
             <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold tracking-tight lg:text-5xl mb-6">
-                        Share Your Honest Opinions
+                        Share Your Mystry Messages
                     </h1>
                     <p className="mb-4">Create Your Account to Begin Your Anonymous Journey</p>
                 </div>
