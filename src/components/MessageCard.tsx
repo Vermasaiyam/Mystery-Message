@@ -31,16 +31,20 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
 
   const handleDeleteConfirm = async () => {
     try {
+      console.log("message id", message._id);
+      
       const response = await axios.delete<ApiResponse>(
         `/api/delete-message/${message._id}`
       );
       toast({
         title: response.data.message,
       });
-      onMessageDelete(message._id);
+      onMessageDelete(message._id as any);
 
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
+      console.log("axios error", axiosError);
+      
       toast({
         title: 'Error',
         description:
@@ -54,7 +58,7 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
     <Card className="card-bordered">
       <CardHeader>
         <div className="flex justify-between items-center">
-          <CardTitle>{message.content}</CardTitle>
+          <CardTitle className='flex flex-wrap break-words max-w-full truncate'>{message.content}</CardTitle>
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <Button variant='destructive'>
@@ -63,9 +67,10 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
             </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Do you want to delete this?</AlertDialogTitle>
+                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
                 <AlertDialogDescription>
-                  This action is irreversible and will permanently delete this message.
+                  This action cannot be undone. This will permanently delete
+                  this message.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
