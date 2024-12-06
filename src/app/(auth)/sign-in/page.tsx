@@ -63,7 +63,7 @@ export default function SignInForm() {
             <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold tracking-tight lg:text-5xl mb-6">
-                        Welcome Back to Mystry Messages
+                        Welcome Back to Mystry Message
                     </h1>
                     <p className="mb-4">Log in to access your private conversations.</p>
                 </div>
